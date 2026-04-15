@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About RVB Associates | Leadership Development Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .mission { background: var(--white); }
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+    .mission-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .mission-img img { width: 100%; height: 460px; object-fit: cover; display: block; }
+
+    .values { background: var(--off-white); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+    .value-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--blue); }
+    .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+    .value-card p { font-size: .88rem; color: var(--gray-500); line-height: 1.7; }
+
+    .team { background: var(--white); }
+    .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+    .team-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,.05); display: flex; gap: 1.75rem; align-items: flex-start; transition: transform var(--transition), box-shadow var(--transition); }
+    .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .team-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid var(--off-white); box-shadow: var(--shadow-sm); }
+    .team-info h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .18rem; }
+    .team-role { font-size: .8rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .5px; margin-bottom: .65rem; }
+    .team-info p { font-size: .88rem; color: var(--gray-500); line-height: 1.7; }
+
+    .check-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: .75rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .92rem; color: var(--gray-700); line-height: 1.6; }
+    .check-list li::before { content: '✓'; min-width: 20px; height: 20px; border-radius: 50%; background: rgba(46,163,242,.12); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 860px) {
+      .mission-grid, .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .team-card { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="books.html">The Books</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>About RVB</span></div>
+  <div class="page-hero-badge">About RVB Associates</div>
+  <h1>Aligning Business Strategy<br/>with <em>Leadership Excellence</em></h1>
+  <p>We are a leadership development and organizational consulting firm dedicated to aligning business development strategies with leadership development goals and corporate culture.</p>
+</div>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="mission-grid">
+    <div class="fade-up">
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Helping Leaders<br/>Realize Their Potential</h2>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.9rem;">RVB Associates was founded on a simple but powerful belief: that when leaders reach their full potential, their organizations follow. We partner deeply with our clients — understanding their unique context, challenges, and goals — to design and deliver transformative experiences that last.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">At the core of our work is a focus on <strong style="color:var(--navy)">Cultures of Voice</strong> — the kind of open, honest, and courageous organizational environments where leaders and teams can perform at their best. We diagnose, design, and sustain these cultures through research-backed methodology and genuine human partnership.</p>
+      <ul class="check-list">
+        <li>Grounded in two decades of original research</li>
+        <li>Practitioners who have led organizations themselves</li>
+        <li>Tailored to every client's unique context</li>
+        <li>Focused on sustainable, measurable outcomes</li>
+      </ul>
+    </div>
+    <div class="mission-img fade-up">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="RVB Associates consulting" />
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">What Guides Us</div>
+      <h2 class="section-title">Our Core Values</h2>
+      <p class="section-sub">The principles that inform everything we do — every engagement, every conversation, every recommendation.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up"><h3>Research-Backed Rigor</h3><p>Every framework and tool we use is grounded in empirical research, including our own original studies on voice and silence in organizations.</p></div>
+      <div class="value-card fade-up"><h3>Genuine Partnership</h3><p>We don't just deliver services — we build relationships. We invest deeply in understanding your context before recommending a path forward.</p></div>
+      <div class="value-card fade-up"><h3>Courage &amp; Candor</h3><p>We tell leaders what they need to hear, not just what they want to hear. Real development requires honest, courageous conversations.</p></div>
+      <div class="value-card fade-up"><h3>Sustainable Change</h3><p>We design for the long term. Our goal is to build internal capability so that organizations continue to grow and improve after our engagement ends.</p></div>
+      <div class="value-card fade-up"><h3>Human-Centered</h3><p>We believe the quality of an organization is ultimately the quality of its people and the quality of the relationships between them.</p></div>
+      <div class="value-card fade-up"><h3>Results-Driven</h3><p>Everything we do is tied to measurable business outcomes. Leadership development is not a soft initiative — it drives real performance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">The People Behind RVB</div>
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="section-sub">Experienced practitioners, researchers, and coaches committed to your organization's success.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <img class="team-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-rob-bogosian.png" alt="Rob Bogosian" />
+        <div class="team-info">
+          <h3>Dr. Rob Bogosian</h3>
+          <div class="team-role">Founder &amp; Managing Principal</div>
+          <p>Dr. Bogosian is the founder of RVB Associates and a leading authority on leadership development and organizational culture. He is the author of <em>Breaking Corporate Silence</em> and <em>The Seven Myths of Leadership in Business</em>, and has worked with Fortune 500 companies, government agencies, and global institutions.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img class="team-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-christine-mockler-casper.png" alt="Christine Mockler Casper" />
+        <div class="team-info">
+          <h3>Christine Mockler Casper</h3>
+          <div class="team-role">Principal &amp; Co-Author</div>
+          <p>Christine is a principal consultant at RVB Associates and co-author of <em>Breaking Corporate Silence</em>. She brings deep expertise in executive coaching, organizational change, and culture transformation, helping leaders and teams navigate complex organizational challenges.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img class="team-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-nancy-brodsky.png" alt="Nancy Brodsky" />
+        <div class="team-info">
+          <h3>Nancy Brodsky</h3>
+          <div class="team-role">Senior Consultant</div>
+          <p>Nancy brings decades of experience in leadership development and organizational consulting. She is known for her practical, human-centered approach to executive coaching and her ability to help leaders build authentic, high-performing teams.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img class="team-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-mark-soto.png" alt="Mark Soto" />
+        <div class="team-info">
+          <h3>Mark Soto</h3>
+          <div class="team-role">Senior Consultant</div>
+          <p>Mark specializes in culture shaping and team development, bringing a unique combination of business acumen and interpersonal expertise to every engagement. He has partnered with organizations across industries to strengthen leadership pipelines and improve organizational effectiveness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner fade-up">
+  <h2>Ready to Work with Our Team?</h2>
+  <p>Schedule a free, no-obligation exploratory session to discuss your leadership and culture goals.</p>
+  <a href="contact.html" class="btn-white">Get In Touch</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

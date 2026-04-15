@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RVB Associates | Leadership Development & Organizational Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    /* ── HOME-SPECIFIC ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      background:
+        linear-gradient(135deg, rgba(11,37,69,.95) 0%, rgba(18,47,90,.90) 60%, rgba(46,163,242,.18) 100%),
+        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1800&q=80') center/cover no-repeat;
+      padding: 120px 5% 80px;
+    }
+    .hero-inner { max-width: 700px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(46,163,242,.15); border: 1px solid rgba(46,163,242,.35);
+      color: var(--blue); padding: .32rem .9rem; border-radius: 50px;
+      font-size: .76rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; color: var(--white); line-height: 1.15; letter-spacing: -1px; margin-bottom: 1.2rem; }
+    .hero h1 em { color: var(--blue); font-style: normal; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,.7); max-width: 540px; margin-bottom: 2.25rem; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero .btn-primary { padding: .85rem 2rem; font-size: 1rem; }
+    .hero .btn-outline-white { padding: .85rem 2rem; font-size: 1rem; }
+
+    .stats { background: var(--navy); padding: 2.8rem 5%; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--blue); letter-spacing: -1px; display: block; }
+    .stat-label { font-size: .82rem; color: rgba(255,255,255,.52); font-weight: 500; }
+
+    .about-home { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+    .about-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .about-img-wrap img { width: 100%; height: 440px; object-fit: cover; display: block; }
+    .about-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--blue); color: var(--white); padding: .85rem 1.3rem; border-radius: var(--radius); font-weight: 700; font-size: .88rem; line-height: 1.3; box-shadow: var(--shadow-md); }
+    .about-badge span { font-size: 1.5rem; font-weight: 800; display: block; }
+    .check-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: .8rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: .8rem; font-size: .92rem; color: var(--gray-700); line-height: 1.6; }
+    .check-list li::before { content: '✓'; min-width: 20px; height: 20px; border-radius: 50%; background: rgba(46,163,242,.12); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; margin-top: 2px; }
+
+    .services-home { background: var(--off-white); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+
+    .clients { background: var(--white); padding: 60px 5%; }
+    .clients h3 { text-align: center; font-size: .76rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 2.5rem; }
+    .logos-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; align-items: center; justify-items: center; max-width: 1000px; margin: 0 auto; }
+    .logos-grid img { max-height: 44px; width: auto; max-width: 140px; filter: grayscale(100%) opacity(.5); transition: filter var(--transition); object-fit: contain; }
+    .logos-grid img:hover { filter: grayscale(0%) opacity(1); }
+
+    .books-home { background: var(--off-white); }
+    .books-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto; }
+    .book-card { background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-md); display: flex; gap: 2rem; align-items: flex-start; transition: transform var(--transition), box-shadow var(--transition); }
+    .book-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .book-cover { width: 110px; flex-shrink: 0; }
+    .book-cover img { width: 100%; border-radius: 6px; box-shadow: var(--shadow-md); }
+    .book-info h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; line-height: 1.35; }
+    .book-info .book-author { font-size: .82rem; color: var(--blue); font-weight: 600; margin-bottom: .65rem; }
+    .book-info p { font-size: .88rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 1rem; }
+
+    .process-home { background: var(--navy); padding: 90px 5%; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 32px; left: 8%; right: 8%; height: 1px; background: rgba(46,163,242,.2); }
+    .step { text-align: center; }
+    .step-num { width: 64px; height: 64px; border-radius: 50%; background: rgba(46,163,242,.1); border: 1.5px solid rgba(46,163,242,.28); color: var(--blue); font-weight: 800; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+    .step h3 { color: var(--white); font-size: .95rem; font-weight: 600; margin-bottom: .45rem; }
+    .step p { color: rgba(255,255,255,.48); font-size: .85rem; line-height: 1.65; }
+
+    .testimonials-home { background: var(--white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+    .t-card { background: var(--gray-100); border-radius: var(--radius-lg); padding: 1.8rem; border: 1px solid rgba(0,0,0,.04); position: relative; }
+    .t-card::before { content: '\201C'; position: absolute; top: .8rem; right: 1.4rem; font-size: 3.5rem; line-height: 1; color: var(--blue); opacity: .22; font-family: Georgia, serif; }
+    .t-card p { font-size: .9rem; color: var(--gray-700); line-height: 1.75; font-style: italic; margin-bottom: 1.25rem; }
+    .t-author { display: flex; align-items: center; gap: .75rem; }
+    .t-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-deep)); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .82rem; flex-shrink: 0; }
+    .t-name { font-weight: 600; font-size: .88rem; color: var(--navy); }
+    .t-title { font-size: .78rem; color: var(--gray-500); }
+
+    @media (max-width: 960px) {
+      .about-grid, .books-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+      .logos-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .logos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="books.html">The Books</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Leadership &amp; Organizational Consulting</div>
+    <h1>Helping Leaders<br/><em>Realize Their</em><br/>Potential</h1>
+    <p>RVB Associates partners with executives and organizations to shape cultures of voice, develop leadership, and unlock your team's full potential.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Schedule a Consultation</a>
+      <a href="what-we-do.html" class="btn-outline-white">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat fade-up"><span class="stat-num">20+</span><span class="stat-label">Years of Experience</span></div>
+  <div class="stat fade-up"><span class="stat-num">200+</span><span class="stat-label">Leaders Developed</span></div>
+  <div class="stat fade-up"><span class="stat-num">50+</span><span class="stat-label">Organizations Served</span></div>
+  <div class="stat fade-up"><span class="stat-num">95%</span><span class="stat-label">Client Retention Rate</span></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-home">
+  <div class="about-grid">
+    <div class="about-img-wrap fade-up">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Leadership consulting" />
+      <div class="about-badge"><span>20+</span>Years of Expertise</div>
+    </div>
+    <div class="fade-up">
+      <div class="section-label">About RVB Associates</div>
+      <h2 class="section-title">We Build Cultures<br/>Where Leaders Thrive</h2>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.85rem;">RVB Associates is a leadership development and organizational consulting firm with a singular focus: helping executives and their organizations reach their full potential through intentional culture shaping.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">We are the authors of <em>Breaking Corporate Silence</em> — the first extensively researched book on how leaders create Cultures of Voice and avoid the dangers of organizational silence.</p>
+      <ul class="check-list">
+        <li>Diagnose root causes of leadership performance gaps</li>
+        <li>Build Cultures of Voice that drive engagement and results</li>
+        <li>Develop high-performing executive teams and leaders</li>
+        <li>Deliver evidence-based, sustainable organizational change</li>
+      </ul>
+      <a href="about.html" class="btn-primary">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-home">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Our Core Services</h2>
+      <p class="section-sub">From one-on-one coaching to enterprise-wide culture transformation — we meet you where you are.</p>
+    </div>
+    <div class="services-grid">
+      <a href="what-we-do.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">🔬</div>
+        <h3>SVI Culture Diagnostic</h3>
+        <p>Our proprietary Silence &amp; Voice Inventory identifies the root causes of leadership gaps and measures the strength of your organizational culture.</p>
+      </a>
+      <a href="workshops.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">🎓</div>
+        <h3>Onsite Workshops</h3>
+        <p>Immersive professional development and team-building workshops driven by SVI diagnostic data to transform culture and boost morale.</p>
+      </a>
+      <a href="keynote.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">🎤</div>
+        <h3>Keynote Speaking</h3>
+        <p>Dr. Rob Bogosian delivers compelling keynote presentations on leadership, corporate silence, and building high-performance cultures.</p>
+      </a>
+      <a href="what-we-do.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">🎯</div>
+        <h3>Executive Coaching</h3>
+        <p>One-on-one coaching engagements that accelerate leadership effectiveness, build self-awareness, and develop high-impact behaviors.</p>
+      </a>
+      <a href="what-we-do.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">🏛️</div>
+        <h3>Culture Shaping</h3>
+        <p>Comprehensive programs that align your organizational values with day-to-day behaviors, replacing silence with voice and engagement.</p>
+      </a>
+      <a href="what-we-do.html" class="card fade-up" style="text-decoration:none;">
+        <div class="card-icon">👥</div>
+        <h3>Team Development</h3>
+        <p>Facilitated experiences that strengthen trust, improve collaboration, and sharpen collective decision-making across your leadership team.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<div class="clients fade-up">
+  <h3>Trusted by World-Class Organizations</h3>
+  <div class="logos-grid">
+    <img src="Images/ImageDownloader_rvbassociates.com_1.png" alt="State Street" />
+    <img src="Images/ImageDownloader_rvbassociates.com_2.png" alt="Microsoft" />
+    <img src="Images/ImageDownloader_rvbassociates.com_4.png" alt="Office Depot" />
+    <img src="Images/ImageDownloader_rvbassociates.com_5.png" alt="Department of Defense" />
+    <img src="Images/ImageDownloader_rvbassociates.com_6.png" alt="Toyota" />
+    <img src="Images/ImageDownloader_rvbassociates.com_7.png" alt="Citizens Financial Group" />
+    <img src="Images/ImageDownloader_rvbassociates.com_8.png" alt="Comcast" />
+    <img src="Images/ImageDownloader_rvbassociates.com_9.png" alt="Panasonic" />
+    <img src="Images/ImageDownloader_rvbassociates.com_10.png" alt="Prudential" />
+    <img src="Images/ImageDownloader_rvbassociates.com_3.png" alt="King Saud University" />
+  </div>
+</div>
+
+<!-- BOOKS -->
+<section class="books-home">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Our Publications</div>
+      <h2 class="section-title">Books by RVB Associates</h2>
+      <p class="section-sub">Groundbreaking research and practical frameworks for modern leaders.</p>
+    </div>
+    <div class="books-grid">
+      <div class="book-card fade-up">
+        <div class="book-cover"><img src="Images/ImageDownloader_rvbassociates.com_corporate-silence-book.png" alt="Breaking Corporate Silence" /></div>
+        <div class="book-info">
+          <h3>Breaking Corporate Silence</h3>
+          <div class="book-author">Rob Bogosian &amp; Christine Mockler Casper</div>
+          <p>The first extensively researched book examining the causes and consequences of silence and voice in organizations — and how leaders can create Cultures of Voice.</p>
+          <a href="the-book.html" class="btn-primary" style="font-size:.82rem;padding:.6rem 1.3rem;">Learn More</a>
+        </div>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-cover"><img src="Images/ImageDownloader_rvbassociates.com_7-Myths-of-Leadership-Book.jpg" alt="The Seven Myths of Leadership" /></div>
+        <div class="book-info">
+          <h3>The Seven Myths of Leadership in Business</h3>
+          <div class="book-author">Dr. Rob Bogosian</div>
+          <p>Provides managers and executives with the information needed to lead effectively in a complex world — moving beyond platitudes to real leadership insight.</p>
+          <a href="seven-myths.html" class="btn-primary" style="font-size:.82rem;padding:.6rem 1.3rem;">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-home">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label" style="color:var(--blue)">Our Approach</div>
+      <h2 class="section-title" style="color:var(--white)">How We Work</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,.58);margin:0 auto;">A disciplined, research-backed methodology tailored to your unique context and goals.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step fade-up"><div class="step-num">01</div><h3>Discover</h3><p>We assess your leadership landscape, conduct SVI diagnostics, and map your culture's current state.</p></div>
+      <div class="step fade-up"><div class="step-num">02</div><h3>Design</h3><p>We co-create a tailored engagement plan with clear milestones, measures, and shared expectations.</p></div>
+      <div class="step fade-up"><div class="step-num">03</div><h3>Develop</h3><p>We deliver immersive coaching, workshops, and programs that build lasting capability.</p></div>
+      <div class="step fade-up"><div class="step-num">04</div><h3>Sustain</h3><p>We equip your leaders with the tools and habits to maintain momentum long after our engagement ends.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-home">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Client Voices</div>
+      <h2 class="section-title">What Leaders Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="t-card fade-up"><p>"RVB Associates fundamentally changed how I show up as a leader. The clarity and confidence I gained has had a ripple effect across my entire organization."</p><div class="t-author"><div class="t-avatar">JM</div><div><div class="t-name">Jennifer M.</div><div class="t-title">Chief Executive Officer</div></div></div></div>
+      <div class="t-card fade-up"><p>"The culture work we did with RVB was the catalyst for real change. Our team finally had a shared language and genuine alignment on who we are and where we're going."</p><div class="t-author"><div class="t-avatar">DT</div><div><div class="t-name">David T.</div><div class="t-title">VP of People &amp; Culture</div></div></div></div>
+      <div class="t-card fade-up"><p>"RVB stands apart because they actually care about your success and bring both depth of knowledge and genuine human connection to every engagement."</p><div class="t-author"><div class="t-avatar">SL</div><div><div class="t-name">Sandra L.</div><div class="t-title">SVP Operations</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner fade-up">
+  <h2>Ready to Realize Your Potential?</h2>
+  <p>Schedule a free, no-obligation exploratory session to discuss your culture or executive development plan.</p>
+  <a href="contact.html" class="btn-white">Schedule a Free Consultation</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

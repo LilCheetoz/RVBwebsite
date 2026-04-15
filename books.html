@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books by RVB Associates | Dr. Rob Bogosian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    /* ── BOOKS HUB ── */
+    .books-hub { background: var(--white); }
+
+    .book-feature {
+      max-width: 1100px; margin: 0 auto 6rem;
+      display: grid; grid-template-columns: 260px 1fr; gap: 5rem; align-items: start;
+    }
+    .book-feature:last-child { margin-bottom: 0; }
+    .book-feature.reverse { grid-template-columns: 1fr 260px; }
+    .book-feature.reverse .book-cover-col { order: 2; }
+    .book-feature.reverse .book-content-col { order: 1; }
+
+    .book-cover-col { position: sticky; top: 96px; }
+    .book-cover-col img {
+      width: 100%; border-radius: 10px;
+      box-shadow: 0 28px 64px rgba(0,0,0,.22);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .book-cover-col img:hover { transform: translateY(-6px) rotate(-1deg); box-shadow: 0 40px 80px rgba(0,0,0,.28); }
+    .cover-label { text-align: center; margin-top: 1rem; font-size: .76rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); }
+
+    .book-num { font-size: .74rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: .5rem; }
+    .book-content-col h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 800; color: var(--navy); line-height: 1.2; letter-spacing: -.4px; margin-bottom: .4rem; }
+    .book-content-col .subtitle { font-size: 1rem; color: var(--blue); font-weight: 600; margin-bottom: .3rem; }
+    .book-content-col .authors { font-size: .85rem; color: var(--gray-500); margin-bottom: 1.25rem; }
+    .stars { color: #f59e0b; font-size: .95rem; margin-bottom: 1rem; letter-spacing: 2px; }
+    .book-content-col p { font-size: .95rem; color: var(--gray-500); line-height: 1.8; margin-bottom: .85rem; }
+
+    .book-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 1.5rem 0; }
+    .highlight { background: var(--off-white); border-radius: var(--radius); padding: .9rem 1rem; border-left: 3px solid var(--blue); }
+    .highlight h4 { font-size: .82rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
+    .highlight p { font-size: .78rem; color: var(--gray-500); line-height: 1.6; margin: 0; }
+
+    .book-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+    .book-tag { display: inline-block; padding: .25rem .7rem; background: rgba(46,163,242,.1); color: var(--blue); border-radius: 4px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; margin-right: .35rem; margin-bottom: .35rem; }
+
+    .divider { max-width: 1100px; margin: 0 auto; height: 1px; background: var(--gray-100); }
+
+    /* Author strip */
+    .author-strip { background: var(--off-white); padding: 60px 5%; }
+    .author-strip-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; }
+    .author-photos { display: flex; gap: -1rem; }
+    .author-photos img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: var(--shadow-sm); margin-left: -14px; }
+    .author-photos img:first-child { margin-left: 0; }
+    .author-strip h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+    .author-strip p { font-size: .9rem; color: var(--gray-500); line-height: 1.7; max-width: 660px; }
+
+    @media (max-width: 860px) {
+      .book-feature, .book-feature.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
+      .book-feature.reverse .book-cover-col, .book-feature.reverse .book-content-col { order: unset; }
+      .book-cover-col { position: static; max-width: 200px; }
+      .book-highlights { grid-template-columns: 1fr; }
+      .author-strip-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="books.html" class="active">The Books</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>The Books</span></div>
+  <div class="page-hero-badge">Publications</div>
+  <h1>Books by<br/><em>RVB Associates</em></h1>
+  <p>Groundbreaking research and practical frameworks for leaders navigating culture, communication, and organizational performance.</p>
+</div>
+
+<!-- BOOKS HUB -->
+<section class="books-hub">
+  <div class="container">
+
+    <!-- BOOK 1 -->
+    <div class="book-feature fade-up">
+      <div class="book-cover-col">
+        <img src="Images/ImageDownloader_rvbassociates.com_corporate-silence-book.png" alt="Breaking Corporate Silence" />
+        <div class="cover-label">Book One</div>
+      </div>
+      <div class="book-content-col">
+        <div class="book-num">Book One</div>
+        <h2>Breaking Corporate Silence</h2>
+        <div class="subtitle">How High-Influence Leaders Create Cultures of Voice</div>
+        <div class="authors">By Rob Bogosian &amp; Christine Mockler Casper</div>
+        <div class="stars">★★★★★</div>
+        <span class="book-tag">Corporate Culture</span>
+        <span class="book-tag">Leadership</span>
+        <span class="book-tag">Communication</span>
+        <p><em>Breaking Corporate Silence</em> is the first extensively researched book that examines the causes and consequences of silence and voice in organizations. It provides a compelling framework for understanding why people stay silent at work — and what high-influence leaders can do about it.</p>
+        <p>Based on years of original research and real-world consulting experience, this book gives leaders the tools to diagnose their organizational culture, understand their own role in perpetuating silence, and take concrete steps to build a Culture of Voice — where candor, courage, and collaboration drive performance.</p>
+        <div class="book-highlights">
+          <div class="highlight"><h4>The SVI Framework</h4><p>Introduces the Silence &amp; Voice Inventory used in all RVB engagements.</p></div>
+          <div class="highlight"><h4>Research-Backed</h4><p>Grounded in extensive original research with thousands of leaders and organizations.</p></div>
+          <div class="highlight"><h4>Actionable Tools</h4><p>Practical frameworks and behaviors leaders can apply immediately.</p></div>
+          <div class="highlight"><h4>Real-World Cases</h4><p>Illustrated through compelling real organizational examples across industries.</p></div>
+        </div>
+        <div class="book-actions">
+          <a href="the-book.html" class="btn-primary">View Full Details</a>
+          <a href="contact.html" class="btn-outline">Order the Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:5rem auto;"></div>
+
+    <!-- BOOK 2 -->
+    <div class="book-feature reverse fade-up">
+      <div class="book-content-col">
+        <div class="book-num">Book Two &nbsp;·&nbsp; <span style="color:var(--blue);font-size:.72rem;">New Release · 2024</span></div>
+        <h2>The Seven Myths of Leadership in Business</h2>
+        <div class="subtitle">Moving Beyond Platitudes to Lead Effectively</div>
+        <div class="authors">By Dr. Rob Bogosian</div>
+        <div class="stars">★★★★★</div>
+        <span class="book-tag">Leadership</span>
+        <span class="book-tag">Management</span>
+        <span class="book-tag">Development</span>
+        <p>In today's complex, rapidly changing business environment, leaders need more than inspiration and platitudes — they need clarity, rigor, and real insight. Dr. Rob Bogosian challenges the conventional wisdom that has long shaped how organizations select, develop, and evaluate leaders.</p>
+        <p>Drawing on decades of research and consulting experience, he identifies seven pervasive myths that lead well-intentioned managers astray — and replaces each with a more honest, effective, and evidence-based framework for leadership. This book gives managers the information they need to lead in a complex world where platitudes have a minimal place.</p>
+        <div class="book-highlights">
+          <div class="highlight"><h4>Seven Myths Examined</h4><p>Each myth is analyzed through research, real examples, and actionable alternatives.</p></div>
+          <div class="highlight"><h4>For All Leaders</h4><p>Relevant to managers at every level — from emerging leaders to C-suite executives.</p></div>
+          <div class="highlight"><h4>2024 Publication</h4><p>Dr. Bogosian's most current thinking on leadership effectiveness.</p></div>
+          <div class="highlight"><h4>Keynote Companion</h4><p>Pairs directly with Dr. Bogosian's Seven Myths keynote presentation.</p></div>
+        </div>
+        <div class="book-actions">
+          <a href="seven-myths.html" class="btn-primary">View Full Details</a>
+          <a href="contact.html" class="btn-outline">Order the Book</a>
+        </div>
+      </div>
+      <div class="book-cover-col">
+        <img src="Images/ImageDownloader_rvbassociates.com_7-Myths-of-Leadership-Book.jpg" alt="The Seven Myths of Leadership in Business" />
+        <div class="cover-label">Book Two</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUTHOR STRIP -->
+<div class="author-strip">
+  <div class="author-strip-inner">
+    <div class="author-photos">
+      <img src="Images/ImageDownloader_rvbassociates.com_rvb-rob-bogosian.png" alt="Dr. Rob Bogosian" />
+      <img src="Images/ImageDownloader_rvbassociates.com_rvb-christine-mockler-casper.png" alt="Christine Mockler Casper" />
+    </div>
+    <div>
+      <h3>About the Authors</h3>
+      <p>Both books are written by practitioners who have spent decades in the field. Dr. Rob Bogosian is the founder of RVB Associates and a leading authority on leadership and organizational culture. Christine Mockler Casper is a principal consultant and co-author with deep expertise in executive coaching and culture transformation.</p>
+      <a href="about.html" style="display:inline-block;margin-top:1rem;font-size:.88rem;font-weight:600;color:var(--blue);text-decoration:none;">Meet the Full Team →</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-banner fade-up">
+  <h2>Bring These Ideas to Your Organization</h2>
+  <p>Both books are available for bulk orders and pair directly with RVB Associates workshops and keynote presentations.</p>
+  <a href="contact.html" class="btn-white">Contact Us About Bulk Orders</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>The Books</h4><ul><li><a href="books.html">All Books</a></li><li><a href="the-book.html">Breaking Corporate Silence</a></li><li><a href="seven-myths.html">Seven Myths of Leadership</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

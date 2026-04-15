@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keynote Speaking | Dr. Rob Bogosian – RVB Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .speaker-section { background: var(--white); }
+    .speaker-grid { display: grid; grid-template-columns: 340px 1fr; gap: 5rem; align-items: start; max-width: 1100px; margin: 0 auto; }
+    .speaker-photo-wrap { position: relative; }
+    .speaker-photo { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; }
+    .speaker-badges { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+    .speaker-badge-item { background: var(--off-white); border-radius: var(--radius); padding: .85rem 1.1rem; border-left: 3px solid var(--blue); }
+    .speaker-badge-item .badge-val { font-size: 1.2rem; font-weight: 800; color: var(--navy); }
+    .speaker-badge-item .badge-label { font-size: .78rem; color: var(--gray-500); }
+    .clients-mini { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; margin-top: 1.75rem; }
+    .clients-mini img { height: 28px; width: auto; filter: grayscale(100%) opacity(.5); object-fit: contain; transition: filter var(--transition); }
+    .clients-mini img:hover { filter: grayscale(0%) opacity(1); }
+
+    .topics { background: var(--off-white); }
+    .topics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; max-width: 1100px; margin: 0 auto; }
+    .topic-card { background: var(--white); border-radius: var(--radius-lg); padding: 2.25rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,.05); transition: transform var(--transition), box-shadow var(--transition); }
+    .topic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .topic-num { font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: .5rem; }
+    .topic-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: .6rem; }
+    .topic-card p { font-size: .9rem; color: var(--gray-500); line-height: 1.75; }
+    .topic-tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .topic-tag { padding: .22rem .65rem; background: rgba(46,163,242,.08); color: var(--blue); border-radius: 4px; font-size: .72rem; font-weight: 600; }
+
+    .formats { background: var(--white); }
+    .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+    .format-card { text-align: center; background: var(--off-white); border-radius: var(--radius-lg); padding: 2rem; }
+    .format-icon { font-size: 2rem; margin-bottom: .85rem; }
+    .format-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+    .format-card p { font-size: .87rem; color: var(--gray-500); line-height: 1.7; }
+    .format-duration { display: inline-block; margin-top: .75rem; padding: .25rem .7rem; background: rgba(46,163,242,.1); color: var(--blue); border-radius: 4px; font-size: .76rem; font-weight: 600; }
+
+    .check-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: .75rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .92rem; color: var(--gray-700); line-height: 1.6; }
+    .check-list li::before { content: '✓'; min-width: 20px; height: 20px; border-radius: 50%; background: rgba(46,163,242,.12); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 900px) {
+      .speaker-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .topics-grid, .formats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="books.html">The Books</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html" class="active">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>Keynote</span></div>
+  <div class="page-hero-badge">Keynote Speaking</div>
+  <h1>Inspiring Leaders to<br/><em>Break the Silence</em></h1>
+  <p>Dr. Rob Bogosian delivers compelling, research-backed keynote presentations that challenge leaders to rethink corporate culture and unlock the full potential of their organizations.</p>
+</div>
+
+<!-- SPEAKER PROFILE -->
+<section class="speaker-section">
+  <div class="speaker-grid">
+    <div class="fade-up">
+      <img class="speaker-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-rob-bogosian.png" alt="Dr. Rob Bogosian - Keynote Speaker" />
+      <div class="speaker-badges">
+        <div class="speaker-badge-item"><div class="badge-val">20+</div><div class="badge-label">Years of Speaking Experience</div></div>
+        <div class="speaker-badge-item"><div class="badge-val">100+</div><div class="badge-label">Organizations Reached</div></div>
+        <div class="speaker-badge-item"><div class="badge-val">2</div><div class="badge-label">Published Books on Leadership</div></div>
+      </div>
+      <p style="font-size:.76rem;color:var(--gray-500);margin-top:1.2rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Has Spoken For</p>
+      <div class="clients-mini">
+        <img src="Images/ImageDownloader_rvbassociates.com_2.png" alt="Microsoft" />
+        <img src="Images/ImageDownloader_rvbassociates.com_6.png" alt="Toyota" />
+        <img src="Images/ImageDownloader_rvbassociates.com_1.png" alt="State Street" />
+        <img src="Images/ImageDownloader_rvbassociates.com_8.png" alt="Comcast" />
+        <img src="Images/ImageDownloader_rvbassociates.com_5.png" alt="Dept of Defense" />
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="section-label">The Speaker</div>
+      <h2 class="section-title">Dr. Rob Bogosian</h2>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.85rem;">Dr. Rob Bogosian is the founder of RVB Associates and one of the foremost voices on leadership, organizational culture, and the dynamics of voice and silence in the workplace. As a researcher, author, and consultant who has worked with Fortune 500 companies and global organizations, he brings an unparalleled depth of knowledge to every stage.</p>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.85rem;">Rob's presentations are not motivational speeches — they are evidence-based, intellectually rigorous, and practically grounded. Audiences leave not just inspired but equipped: with frameworks, tools, and a new way of seeing their role as leaders.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">He is the author of <em>Breaking Corporate Silence</em> and <em>The Seven Myths of Leadership in Business</em>, and draws from his original research throughout his presentations to ground every insight in data, not opinion.</p>
+      <ul class="check-list">
+        <li>Customized for your event theme, audience, and industry</li>
+        <li>Research-backed content with immediate practical application</li>
+        <li>Engaging, dynamic delivery that challenges and energizes</li>
+        <li>Book signing and audience Q&amp;A available</li>
+        <li>Workshop add-ons available post-keynote</li>
+      </ul>
+      <a href="contact.html" class="btn-primary" style="margin-top:.5rem;">Book Dr. Bogosian</a>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section class="topics">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Speaking Topics</div>
+      <h2 class="section-title">Keynote Programs</h2>
+      <p class="section-sub">Each keynote is fully customizable to your event, audience, and organizational context.</p>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-card fade-up">
+        <div class="topic-num">Signature Keynote</div>
+        <h3>Breaking Corporate Silence: How Leaders Create Cultures of Voice</h3>
+        <p>The flagship keynote drawn directly from Dr. Bogosian's groundbreaking research. Audiences discover why organizational silence is more dangerous than most leaders realize, how they may be contributing to it, and the specific behaviors that transform silence into voice. Powerful, challenging, and immediately applicable.</p>
+        <div class="topic-tags"><span class="topic-tag">Culture</span><span class="topic-tag">Leadership</span><span class="topic-tag">Communication</span></div>
+      </div>
+      <div class="topic-card fade-up">
+        <div class="topic-num">Leadership Keynote</div>
+        <h3>The Seven Myths of Leadership in Business</h3>
+        <p>Based on his latest book, Dr. Bogosian dismantles the most common — and most damaging — leadership myths that prevent managers from reaching their full potential. A revelatory talk for leaders at every level who want to move beyond conventional wisdom and lead with genuine effectiveness.</p>
+        <div class="topic-tags"><span class="topic-tag">Leadership</span><span class="topic-tag">Management</span><span class="topic-tag">Development</span></div>
+      </div>
+      <div class="topic-card fade-up">
+        <div class="topic-num">Culture Keynote</div>
+        <h3>Culture Isn't What You Say — It's What You Tolerate</h3>
+        <p>An unflinching look at how organizational culture is actually formed — not through values posters or mission statements, but through the behaviors leaders consistently accept, ignore, or reward. A provocative and actionable keynote for leaders responsible for shaping their organization's culture.</p>
+        <div class="topic-tags"><span class="topic-tag">Culture</span><span class="topic-tag">Accountability</span><span class="topic-tag">Change</span></div>
+      </div>
+      <div class="topic-card fade-up">
+        <div class="topic-num">Performance Keynote</div>
+        <h3>The Silent Performance Problem: Why Your Best People Aren't Telling You the Truth</h3>
+        <p>Explores the intersection of organizational silence and business performance, showing how the things leaders and employees don't say are costing organizations in engagement, innovation, and results — and what to do about it. Ideal for executive and senior leadership audiences.</p>
+        <div class="topic-tags"><span class="topic-tag">Performance</span><span class="topic-tag">Engagement</span><span class="topic-tag">Innovation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Delivery Formats</div>
+      <h2 class="section-title">Flexible to Fit Your Event</h2>
+    </div>
+    <div class="formats-grid">
+      <div class="format-card fade-up"><div class="format-icon">⚡</div><h3>Keynote Presentation</h3><p>A high-energy, research-driven presentation designed to open or close your conference, retreat, or leadership summit with impact and clarity.</p><span class="format-duration">45–90 minutes</span></div>
+      <div class="format-card fade-up"><div class="format-icon">🎓</div><h3>Workshop Session</h3><p>An interactive, facilitated session that combines keynote-style content with small-group exercises and discussion, for deeper engagement and learning.</p><span class="format-duration">Half or Full Day</span></div>
+      <div class="format-card fade-up"><div class="format-icon">💬</div><h3>Executive Roundtable</h3><p>An intimate, facilitated conversation with a senior leadership group, exploring the keynote themes in the context of your organization's specific challenges and goals.</p><span class="format-duration">2–3 hours</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner fade-up">
+  <h2>Bring Dr. Bogosian to Your Event</h2>
+  <p>Contact us to check availability, discuss your event goals, and receive a custom keynote proposal.</p>
+  <a href="contact.html" class="btn-white">Inquire About Booking</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

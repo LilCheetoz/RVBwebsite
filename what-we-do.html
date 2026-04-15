@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do | RVB Associates – Shaping Cultures of Voice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .intro { background: var(--white); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+    .intro-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .intro-img img { width: 100%; height: 440px; object-fit: cover; display: block; }
+
+    .culture-compare { background: var(--off-white); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1100px; margin: 0 auto; }
+    .compare-card { border-radius: var(--radius-lg); padding: 2.5rem; }
+    .compare-card.voice { background: var(--navy); }
+    .compare-card.silence { background: var(--white); border: 1.5px solid var(--gray-300); }
+    .compare-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1.25rem; }
+    .compare-card.voice h3 { color: var(--blue); }
+    .compare-card.silence h3 { color: var(--gray-700); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+    .compare-list li { font-size: .9rem; line-height: 1.6; display: flex; gap: .7rem; align-items: flex-start; }
+    .compare-card.voice .compare-list li { color: rgba(255,255,255,.78); }
+    .compare-card.voice .compare-list li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+    .compare-card.silence .compare-list li { color: var(--gray-500); }
+    .compare-card.silence .compare-list li::before { content: '✗'; color: #e05252; font-weight: 700; flex-shrink: 0; }
+
+    .svi { background: var(--white); }
+    .svi-inner { max-width: 1100px; margin: 0 auto; }
+    .svi-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+    .svi-card { background: var(--navy); border-radius: var(--radius-lg); padding: 2.5rem; }
+    .svi-card h4 { font-size: .76rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .svi-metric { display: flex; justify-content: space-between; align-items: center; padding: .85rem 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .svi-metric:last-child { border-bottom: none; }
+    .svi-metric-label { font-size: .88rem; color: rgba(255,255,255,.7); }
+    .svi-metric-bar { flex: 1; height: 6px; background: rgba(255,255,255,.1); border-radius: 3px; margin: 0 1rem; }
+    .svi-metric-fill { height: 100%; background: var(--blue); border-radius: 3px; }
+    .svi-metric-val { font-size: .82rem; font-weight: 600; color: var(--blue); }
+
+    .services-detail { background: var(--off-white); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+
+    .check-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: .75rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .92rem; color: var(--gray-700); line-height: 1.6; }
+    .check-list li::before { content: '✓'; min-width: 20px; height: 20px; border-radius: 50%; background: rgba(46,163,242,.12); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 860px) {
+      .intro-grid, .compare-grid, .svi-grid, .services-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html" class="active">What We Do</a></li>
+    <li><a href="books.html">The Books</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>What We Do</span></div>
+  <div class="page-hero-badge">Our Services</div>
+  <h1>Shaping <em>Cultures of Voice</em><br/>in Your Organization</h1>
+  <p>We examine the root causes of leadership performance gaps and the strength of your Culture of Voice or Silence — then partner with you to create lasting change.</p>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-grid">
+    <div class="fade-up">
+      <div class="section-label">The Core Problem We Solve</div>
+      <h2 class="section-title">Why Leaders &amp; Organizations Underperform</h2>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.9rem;">Most organizations struggle not because their people lack talent or intelligence — but because their culture prevents honest, open communication. When employees and leaders stay silent instead of speaking up, organizations drift toward mediocrity, missed opportunities, and avoidable crises.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">At RVB Associates, we go beneath the surface. We identify the root causes of leadership performance gaps and the hidden cultural forces — the <strong style="color:var(--navy)">Culture of Silence</strong> — that hold your organization back. Then we help you build a <strong style="color:var(--navy)">Culture of Voice</strong> where candor, courage, and collaboration thrive.</p>
+      <ul class="check-list">
+        <li>Diagnose leadership performance gaps at every level</li>
+        <li>Identify the organizational silence patterns holding you back</li>
+        <li>Design and implement culture transformation programs</li>
+        <li>Build internal leadership capability that sustains change</li>
+      </ul>
+    </div>
+    <div class="intro-img fade-up">
+      <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=80" alt="Team discussion" />
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE COMPARE -->
+<section class="culture-compare">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">The Fundamental Distinction</div>
+      <h2 class="section-title">Culture of Voice vs. Culture of Silence</h2>
+      <p class="section-sub">The difference between these two cultures determines whether your organization reaches its potential — or falls short of it.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card voice fade-up">
+        <h3>Culture of Voice</h3>
+        <ul class="compare-list">
+          <li>Leaders actively invite dissent and alternative viewpoints</li>
+          <li>Employees feel safe raising concerns and new ideas</li>
+          <li>Candid feedback flows upward, downward, and laterally</li>
+          <li>Problems are surfaced early before they become crises</li>
+          <li>High engagement, trust, and psychological safety</li>
+          <li>Decisions are informed by diverse perspectives</li>
+          <li>Innovation and continuous improvement flourish</li>
+          <li>Accountability is shared across the organization</li>
+        </ul>
+      </div>
+      <div class="compare-card silence fade-up">
+        <h3>Culture of Silence</h3>
+        <ul class="compare-list">
+          <li>Leaders surround themselves with "yes" people</li>
+          <li>Employees withhold concerns out of fear or futility</li>
+          <li>Critical information never reaches decision-makers</li>
+          <li>Problems fester undetected until they become crises</li>
+          <li>Low engagement, high turnover, and distrust</li>
+          <li>Groupthink drives poor, unilateral decisions</li>
+          <li>Stagnation and missed opportunities accumulate</li>
+          <li>Blame culture undermines performance and morale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SVI DIAGNOSTIC -->
+<section class="svi">
+  <div class="svi-inner">
+    <div class="svi-grid">
+      <div class="fade-up">
+        <div class="section-label">Our Proprietary Tool</div>
+        <h2 class="section-title">The SVI Diagnostic</h2>
+        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.9rem;">The <strong style="color:var(--navy)">Silence &amp; Voice Inventory (SVI)</strong> is RVB Associates' proprietary diagnostic tool, developed through years of original research. It measures the health of your organizational culture along the voice-silence spectrum, pinpointing exactly where — and why — silence takes hold.</p>
+        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:1.25rem;">The SVI provides a quantitative, data-driven baseline for your culture transformation. Every workshop, coaching engagement, and organizational program we design is grounded in your SVI results.</p>
+        <ul class="check-list">
+          <li>Validated research instrument with proven reliability</li>
+          <li>Benchmarked against thousands of leaders and organizations</li>
+          <li>Results delivered in clear, actionable reports</li>
+          <li>Forms the data foundation for every engagement</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="margin-top:.5rem;">Request an SVI Assessment</a>
+      </div>
+      <div class="svi-card fade-up">
+        <h4>Sample SVI Culture Profile</h4>
+        <div class="svi-metric"><span class="svi-metric-label">Psychological Safety</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:72%"></div></div><span class="svi-metric-val">72%</span></div>
+        <div class="svi-metric"><span class="svi-metric-label">Leadership Openness</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:58%"></div></div><span class="svi-metric-val">58%</span></div>
+        <div class="svi-metric"><span class="svi-metric-label">Upward Voice</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:44%"></div></div><span class="svi-metric-val">44%</span></div>
+        <div class="svi-metric"><span class="svi-metric-label">Peer Communication</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:81%"></div></div><span class="svi-metric-val">81%</span></div>
+        <div class="svi-metric"><span class="svi-metric-label">Fear of Retaliation</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:35%"></div></div><span class="svi-metric-val">35%</span></div>
+        <div class="svi-metric"><span class="svi-metric-label">Innovation Culture</span><div class="svi-metric-bar"><div class="svi-metric-fill" style="width:66%"></div></div><span class="svi-metric-val">66%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="services-detail">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Our Service Offerings</div>
+      <h2 class="section-title">How We Partner With You</h2>
+      <p class="section-sub">Six integrated service areas, each informed by the SVI diagnostic and tailored to your specific goals.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card fade-up"><div class="card-icon">🔬</div><h3>SVI Culture Diagnostic</h3><p>The starting point for any engagement. Our proprietary assessment gives you an objective, data-driven picture of your culture's voice-silence profile.</p></div>
+      <div class="card fade-up"><div class="card-icon">🎯</div><h3>Executive Coaching</h3><p>One-on-one coaching that helps executives understand their impact on organizational culture and develop the habits of high-performing leaders.</p></div>
+      <div class="card fade-up"><div class="card-icon">🏛️</div><h3>Culture Transformation</h3><p>End-to-end programs that move your organization from a Culture of Silence to a Culture of Voice through assessment, education, and behavior change.</p></div>
+      <div class="card fade-up"><div class="card-icon">👥</div><h3>Team Development</h3><p>Facilitated experiences that help leadership teams and work groups build trust, surface conflict constructively, and collaborate more effectively.</p></div>
+      <div class="card fade-up"><div class="card-icon">🎓</div><h3>Leadership Programs</h3><p>Multi-month development programs that build the skills, mindsets, and habits leaders need to create and sustain Cultures of Voice across the enterprise.</p></div>
+      <div class="card fade-up"><div class="card-icon">🎤</div><h3>Keynote &amp; Workshops</h3><p>Engaging keynote presentations and immersive onsite workshops that bring the science and practice of Culture of Voice to life for your entire organization.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner fade-up">
+  <h2>Start With a Free Exploratory Session</h2>
+  <p>Discuss your culture and leadership goals with no obligation. We'll help you understand whether and how RVB Associates can support your organization.</p>
+  <a href="contact.html" class="btn-white">Schedule Your Free Session</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

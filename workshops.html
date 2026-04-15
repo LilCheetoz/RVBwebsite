@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshops | RVB Associates – Professional Development & Team Building</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .workshops-intro { background: var(--white); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+    .intro-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .intro-img img { width: 100%; height: 440px; object-fit: cover; display: block; }
+
+    .workshops-list { background: var(--off-white); }
+    .workshops-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; max-width: 1100px; margin: 0 auto; }
+    .workshop-card { background: var(--white); border-radius: var(--radius-lg); padding: 2.25rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,.05); transition: transform var(--transition), box-shadow var(--transition); }
+    .workshop-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .workshop-tag { display: inline-block; padding: .28rem .75rem; background: rgba(46,163,242,.1); color: var(--blue); border-radius: 50px; font-size: .72rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin-bottom: .9rem; }
+    .workshop-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: .6rem; }
+    .workshop-card p { font-size: .9rem; color: var(--gray-500); line-height: 1.75; margin-bottom: 1rem; }
+    .workshop-meta { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .workshop-meta span { font-size: .78rem; color: var(--gray-500); display: flex; align-items: center; gap: .35rem; }
+
+    .process { background: var(--white); }
+    .steps-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto; counter-reset: step; }
+    .step-item { display: flex; gap: 1.5rem; align-items: flex-start; counter-increment: step; }
+    .step-num { min-width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
+    .step-content h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
+    .step-content p { font-size: .9rem; color: var(--gray-500); line-height: 1.7; }
+
+    .check-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: .75rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .92rem; color: var(--gray-700); line-height: 1.6; }
+    .check-list li::before { content: '✓'; min-width: 20px; height: 20px; border-radius: 50%; background: rgba(46,163,242,.12); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 860px) {
+      .intro-grid, .workshops-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="books.html">The Books</a></li>
+    <li><a href="workshops.html" class="active">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>Workshops</span></div>
+  <div class="page-hero-badge">Workshops</div>
+  <h1>Transform Your Culture<br/>Through <em>Powerful Learning</em></h1>
+  <p>Onsite professional development and team-building workshops grounded in SVI diagnostic data — designed to boost employee morale and transform corporate culture.</p>
+</div>
+
+<!-- INTRO -->
+<section class="workshops-intro">
+  <div class="intro-grid">
+    <div class="fade-up">
+      <div class="section-label">Why Our Workshops Work</div>
+      <h2 class="section-title">Data-Driven. Human-Centered.<br/>Results-Focused.</h2>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.9rem;">Every RVB Associates workshop begins with data. Before anyone sets foot in the room, we've analyzed your organization's SVI (Silence &amp; Voice Inventory) diagnostic results to understand your culture's unique profile — where voice is strong, where silence takes hold, and what's driving the gap.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">This means your workshop isn't a generic training program — it's a precision-designed experience built around your specific challenges, your team dynamics, and your goals. Participants leave with insights and tools they can use immediately.</p>
+      <ul class="check-list">
+        <li>Grounded in your SVI diagnostic data, not generic content</li>
+        <li>Delivered onsite by experienced RVB Associates consultants</li>
+        <li>Customized for your industry, team size, and culture</li>
+        <li>Followed by action planning and accountability structures</li>
+        <li>Linked to measurable outcomes and behavioral change</li>
+      </ul>
+    </div>
+    <div class="intro-img fade-up">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Workshop session" />
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP TYPES -->
+<section class="workshops-list">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Our Workshop Portfolio</div>
+      <h2 class="section-title">Programs for Every Need</h2>
+      <p class="section-sub">From half-day intensives to multi-day culture transformation experiences.</p>
+    </div>
+    <div class="workshops-grid">
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Culture</span>
+        <h3>Breaking Corporate Silence</h3>
+        <p>The flagship RVB workshop. Drawing directly from our research and the book, participants learn to identify silence patterns in their organization, understand the root causes, and develop personal leadership commitments to build a Culture of Voice.</p>
+        <div class="workshop-meta"><span>📅 Full Day</span><span>👥 Up to 50 participants</span><span>📍 Onsite</span></div>
+      </div>
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Leadership</span>
+        <h3>High-Influence Leadership</h3>
+        <p>Designed for senior leaders and executives, this workshop examines how leaders at every level influence whether their organizations speak up or stay silent — and what high-influence leaders do differently to drive performance.</p>
+        <div class="workshop-meta"><span>📅 Half or Full Day</span><span>👥 Up to 20 participants</span><span>📍 Onsite</span></div>
+      </div>
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Team Building</span>
+        <h3>Building Trust &amp; Psychological Safety</h3>
+        <p>A hands-on team experience using SVI data to help groups understand their trust dynamics, surface and resolve hidden conflict, and build the psychological safety needed for genuine collaboration and high performance.</p>
+        <div class="workshop-meta"><span>📅 Full Day</span><span>👥 Teams of 8–25</span><span>📍 Onsite or Offsite</span></div>
+      </div>
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Communication</span>
+        <h3>Courageous Conversations</h3>
+        <p>Equips leaders and team members with the mindsets, language, and tools to have the honest, difficult conversations that are essential to organizational health — replacing avoidance and silence with candor and connection.</p>
+        <div class="workshop-meta"><span>📅 Half Day</span><span>👥 Up to 30 participants</span><span>📍 Onsite</span></div>
+      </div>
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Culture Change</span>
+        <h3>Culture Shaping Intensive</h3>
+        <p>A multi-day culture transformation experience for leadership teams, combining SVI diagnostic debrief, leadership assessment, and facilitated culture design — resulting in a concrete culture roadmap and behavioral commitments.</p>
+        <div class="workshop-meta"><span>📅 2–3 Days</span><span>👥 Leadership Team (up to 20)</span><span>📍 Onsite or Retreat</span></div>
+      </div>
+      <div class="workshop-card fade-up">
+        <span class="workshop-tag">Development</span>
+        <h3>Leadership Pipeline Program</h3>
+        <p>A multi-session workshop series for emerging leaders, combining leadership fundamentals, voice and culture education, self-assessment, and peer learning — building the next generation of high-influence leaders in your organization.</p>
+        <div class="workshop-meta"><span>📅 Multi-session series</span><span>👥 Up to 20 participants</span><span>📍 Onsite</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Our Process</div>
+      <h2 class="section-title">How We Design Your Workshop</h2>
+      <p class="section-sub">Every workshop follows a rigorous design process to ensure your investment delivers maximum impact.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-item fade-up"><div class="step-num">1</div><div class="step-content"><h3>Discovery Call</h3><p>We start with a conversation to understand your organization's current state, goals, team dynamics, and desired outcomes from the workshop experience.</p></div></div>
+      <div class="step-item fade-up"><div class="step-num">2</div><div class="step-content"><h3>SVI Assessment</h3><p>Participants complete the Silence &amp; Voice Inventory. We analyze the aggregate data to create a culture profile specific to your team or organization.</p></div></div>
+      <div class="step-item fade-up"><div class="step-num">3</div><div class="step-content"><h3>Custom Design</h3><p>Using your SVI results and discovery insights, we design a workshop curriculum that addresses your specific culture gaps and leadership development needs.</p></div></div>
+      <div class="step-item fade-up"><div class="step-num">4</div><div class="step-content"><h3>Facilitated Delivery</h3><p>An experienced RVB Associates consultant facilitates your workshop onsite, creating a safe, engaging, and challenging learning environment.</p></div></div>
+      <div class="step-item fade-up"><div class="step-num">5</div><div class="step-content"><h3>Action Planning &amp; Follow-Through</h3><p>Every workshop concludes with individual and team action commitments. We provide follow-up support to maintain momentum and track progress.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner fade-up">
+  <h2>Ready to Transform Your Team?</h2>
+  <p>Contact us to discuss which workshop experience is right for your organization and schedule a free planning conversation.</p>
+  <a href="contact.html" class="btn-white">Schedule a Workshop Consultation</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

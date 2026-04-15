@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breaking Corporate Silence | RVB Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .book-hero-section { background: var(--white); }
+    .book-hero-grid { display: grid; grid-template-columns: 280px 1fr; gap: 5rem; align-items: start; max-width: 1100px; margin: 0 auto; }
+    .book-cover-large { width: 100%; border-radius: 10px; box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+    .book-meta { display: flex; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap; }
+    .book-meta-item { }
+    .book-meta-item .meta-label { font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: .2rem; }
+    .book-meta-item .meta-val { font-size: .92rem; font-weight: 600; color: var(--navy); }
+    .book-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: .5rem; }
+
+    .book-detail { background: var(--off-white); }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto; }
+    .detail-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+    .detail-block p { font-size: .92rem; color: var(--gray-500); line-height: 1.8; margin-bottom: .85rem; }
+
+    .chapter-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; counter-reset: chap; }
+    .chapter-list li { display: flex; align-items: flex-start; gap: .85rem; font-size: .9rem; color: var(--gray-700); line-height: 1.6; padding: .7rem .9rem; background: var(--white); border-radius: var(--radius); border: 1px solid rgba(0,0,0,.05); counter-increment: chap; }
+    .chapter-list li::before { content: counter(chap); min-width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; flex-shrink: 0; }
+
+    .authors { background: var(--white); }
+    .authors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1100px; margin: 0 auto; }
+    .author-card { display: flex; gap: 1.5rem; align-items: flex-start; background: var(--off-white); border-radius: var(--radius-lg); padding: 2rem; }
+    .author-photo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .author-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .15rem; }
+    .author-body .role { font-size: .78rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .4px; margin-bottom: .6rem; }
+    .author-body p { font-size: .87rem; color: var(--gray-500); line-height: 1.7; }
+
+    .endorsements { background: var(--off-white); }
+    .endorsements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; max-width: 1100px; margin: 0 auto; }
+    .endorsement { background: var(--white); border-radius: var(--radius-lg); padding: 1.8rem; border: 1px solid rgba(0,0,0,.04); }
+    .endorsement p { font-size: .88rem; color: var(--gray-700); line-height: 1.75; font-style: italic; margin-bottom: 1rem; }
+    .endorsement-author { font-size: .8rem; font-weight: 600; color: var(--navy); }
+    .endorsement-title { font-size: .76rem; color: var(--gray-500); }
+
+    @media (max-width: 860px) {
+      .book-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .book-cover-large { max-width: 220px; }
+      .detail-grid, .authors-grid, .endorsements-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">RVB<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="the-book.html" class="active">The Book</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="keynote.html">Keynote</a></li>
+    <li><a href="newsroom.html">Newsroom</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>The Book</span></div>
+  <div class="page-hero-badge">Our Book</div>
+  <h1><em>Breaking Corporate Silence</em></h1>
+  <p>How High-Influence Leaders Create Cultures of Voice — the first extensively researched book on silence and voice in organizations.</p>
+</div>
+
+<!-- BOOK HERO -->
+<section class="book-hero-section">
+  <div class="book-hero-grid">
+    <div class="fade-up">
+      <img class="book-cover-large" src="Images/ImageDownloader_rvbassociates.com_corporate-silence-book.png" alt="Breaking Corporate Silence book cover" />
+    </div>
+    <div class="fade-up">
+      <div class="stars">★★★★★</div>
+      <h2 class="section-title" style="margin-bottom:.5rem;">Breaking Corporate Silence</h2>
+      <p style="font-size:1.05rem;color:var(--blue);font-weight:600;margin-bottom:1rem;">How High-Influence Leaders Create Cultures of Voice</p>
+      <div class="book-meta">
+        <div class="book-meta-item"><div class="meta-label">Authors</div><div class="meta-val">Rob Bogosian &amp; Christine Mockler Casper</div></div>
+        <div class="book-meta-item"><div class="meta-label">Publisher</div><div class="meta-val">RVB Associates Press</div></div>
+      </div>
+      <p style="color:var(--gray-500);line-height:1.8;margin-bottom:.85rem;"><em>Breaking Corporate Silence</em> is the first extensively researched book that examines the causes and consequences of silence and voice in organizations. It provides a compelling framework for understanding why people stay silent at work — and what high-influence leaders can do about it.</p>
+      <p style="color:var(--gray-500);line-height:1.8;">Based on years of original research and real-world consulting experience, this book gives leaders the tools to diagnose their organizational culture, understand their own role in perpetuating silence, and take concrete steps to build a Culture of Voice.</p>
+      <div class="book-actions">
+        <a href="contact.html" class="btn-primary">Order the Book</a>
+        <a href="about.html" class="btn-outline">Meet the Authors</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL -->
+<section class="book-detail">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">Inside the Book</div>
+      <h2 class="section-title">What You'll Discover</h2>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-block fade-up">
+        <h3>The Research Foundation</h3>
+        <p>Drawing on extensive research with thousands of leaders and employees across industries, <em>Breaking Corporate Silence</em> presents a data-driven analysis of organizational silence: how it starts, how it spreads, and what it costs organizations in performance, innovation, and human potential.</p>
+        <p>The authors developed the Silence &amp; Voice Inventory (SVI) — a validated assessment instrument used to measure and diagnose organizational culture along the silence-voice spectrum — the backbone of every engagement RVB Associates conducts.</p>
+        <p>The result is not just theory but a practitioner's guide for leaders who want to make real, lasting change in how their organizations communicate and perform.</p>
+      </div>
+      <div class="detail-block fade-up">
+        <h3>Key Chapters</h3>
+        <ul class="chapter-list">
+          <li>The Anatomy of Corporate Silence</li>
+          <li>Why Leaders Create Cultures of Silence Without Knowing It</li>
+          <li>The High Cost of Organizational Silence</li>
+          <li>Diagnosing Your Culture: The SVI Framework</li>
+          <li>What High-Influence Leaders Do Differently</li>
+          <li>Building a Culture of Voice: The Five Practices</li>
+          <li>Leading with Courage: The Candor Imperative</li>
+          <li>Sustaining Voice: Making Change Stick</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORS -->
+<section class="authors">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">The Authors</div>
+      <h2 class="section-title">About the Authors</h2>
+    </div>
+    <div class="authors-grid">
+      <div class="author-card fade-up">
+        <img class="author-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-rob-bogosian.png" alt="Rob Bogosian" />
+        <div class="author-body">
+          <h3>Dr. Rob Bogosian</h3>
+          <div class="role">Founder, RVB Associates</div>
+          <p>Dr. Rob Bogosian is the founder of RVB Associates and a leading authority on leadership development and organizational culture. He has worked with Fortune 500 companies, government agencies, and global organizations including Microsoft, Toyota, Comcast, and the U.S. Department of Defense.</p>
+        </div>
+      </div>
+      <div class="author-card fade-up">
+        <img class="author-photo" src="Images/ImageDownloader_rvbassociates.com_rvb-christine-mockler-casper.png" alt="Christine Mockler Casper" />
+        <div class="author-body">
+          <h3>Christine Mockler Casper</h3>
+          <div class="role">Principal, RVB Associates</div>
+          <p>Christine Mockler Casper is a principal consultant and co-author at RVB Associates with deep expertise in executive coaching, organizational change, and culture transformation. She brings a practitioner's perspective grounded in decades of work with senior leaders and teams.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENDORSEMENTS -->
+<section class="endorsements">
+  <div class="container">
+    <div class="section-header center fade-up">
+      <div class="section-label">What Leaders Are Saying</div>
+      <h2 class="section-title">Praise for Breaking Corporate Silence</h2>
+    </div>
+    <div class="endorsements-grid">
+      <div class="endorsement fade-up"><p>"A groundbreaking work. Every leader needs to understand how their behavior shapes whether their people speak up or stay silent — this book shows you exactly how."</p><div class="endorsement-author">Senior Executive</div><div class="endorsement-title">Fortune 500 Financial Services</div></div>
+      <div class="endorsement fade-up"><p>"Finally, a research-backed framework for understanding one of leadership's most overlooked challenges. Practical, insightful, and immediately actionable."</p><div class="endorsement-author">VP of Human Resources</div><div class="endorsement-title">Global Technology Company</div></div>
+      <div class="endorsement fade-up"><p>"This book changed how I lead. I had no idea how much my behavior was shutting down the very conversations my organization needed to have. A must-read."</p><div class="endorsement-author">President</div><div class="endorsement-title">Regional Financial Institution</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner fade-up">
+  <h2>Also by Dr. Rob Bogosian</h2>
+  <p>Explore <em>The Seven Myths of Leadership in Business</em> — the latest work from RVB Associates.</p>
+  <a href="seven-myths.html" class="btn-white">View the Second Book</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo">RVB<span>.</span></div><p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="keynote.html">Keynote</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About RVB</a></li><li><a href="books.html">The Books</a></li><li><a href="seven-myths.html">Seven Myths</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get In Touch</a></li><li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li><li><a href="#">Naples, FL</a></li><li><a href="#">Mashpee, MA</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 RVB Associates. All rights reserved.</p><p>Leadership Development &amp; Organizational Consulting</p></div>
+</footer>
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
