@@ -37,7 +37,7 @@ nav {
 }
 nav.scrolled { background: rgba(11,37,69,.99); box-shadow: 0 1px 0 rgba(255,255,255,.06), var(--shadow-md); }
 .nav-logo { text-decoration: none; flex-shrink: 0; display: flex; align-items: center; }
-.nav-logo img { height: 44px; width: auto; display: block; }
+.nav-logo img { height: 62px; width: auto; display: block; }
 .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
 .nav-links a {
   color: rgba(255,255,255,.7); text-decoration: none; font-size: .82rem; font-weight: 500;
@@ -216,6 +216,14 @@ footer { background: #070f1e; padding: 60px 5% 28px; border-top: 1px solid rgba(
   transition: background var(--transition), transform var(--transition);
 }
 .form-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+/* ── HEX PATTERN — all light sections (not dark ones) ─────── */
+/* specificity (0,1,1) beats page-level class rules (0,1,0)    */
+section:not(.hero):not(.impact-home):not(.page-hero) {
+  background-color: #eaecf0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.78' height='36' viewBox='0 0 20.78 36'%3E%3Cpolygon points='10.39,0 20.78,6 20.78,18 10.39,24 0,18 0,6' fill='%23e6e9ee'/%3E%3Cpolygon points='0,6 10.39,0 10.39,12' fill='%23ffffff' fill-opacity='0.15'/%3E%3Cpolygon points='20.78,18 10.39,24 10.39,12' fill='%23000000' fill-opacity='0.06'/%3E%3Cpolygon points='10.39,24 0,18 10.39,12' fill='%23000000' fill-opacity='0.04'/%3E%3Cpolygon points='10.39,0 20.78,6 20.78,18 10.39,24 0,18 0,6' fill='none' stroke='%23d8dbe1' stroke-width='0.5'/%3E%3Cpolygon points='0,18 10.39,24 10.39,36 0,36' fill='%23e6e9ee'/%3E%3Cpolygon points='0,18 10.39,24 0,30' fill='%23ffffff' fill-opacity='0.15'/%3E%3Cpolygon points='10.39,24 10.39,36 0,30' fill='%23000000' fill-opacity='0.04'/%3E%3Cpolygon points='10.39,36 0,36 0,30' fill='%23000000' fill-opacity='0.06'/%3E%3Cpolygon points='0,18 -10.39,24 -10.39,36 0,42 10.39,36 10.39,24' fill='none' stroke='%23d8dbe1' stroke-width='0.5'/%3E%3Cpolygon points='20.78,18 10.39,24 10.39,36 20.78,36' fill='%23e6e9ee'/%3E%3Cpolygon points='20.78,18 10.39,24 20.78,30' fill='%23ffffff' fill-opacity='0.15'/%3E%3Cpolygon points='10.39,24 10.39,36 20.78,30' fill='%23000000' fill-opacity='0.04'/%3E%3Cpolygon points='10.39,36 20.78,36 20.78,30' fill='%23000000' fill-opacity='0.06'/%3E%3Cpolygon points='20.78,18 31.17,24 31.17,36 20.78,42 10.39,36 10.39,24' fill='none' stroke='%23d8dbe1' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 20.78px 36px;
+}
 
 /* ── FADE-UP ANIMATION ────────────────────────────────────── */
 .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disruption Ready | Coming Soon — RVB Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rvb-styles.css" />
+  <style>
+    .coming-soon-wrap {
+      min-height: 100dvh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 120px 5% 80px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 55%, rgba(30,143,213,.12) 100%);
+      position: relative; overflow: hidden;
+    }
+    .coming-soon-wrap::before {
+      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+    .coming-soon-inner {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; gap: 6rem; max-width: 1000px; margin: 0 auto;
+    }
+    .book-cover-wrap {
+      flex-shrink: 0; width: 280px;
+    }
+    .book-cover-wrap img {
+      width: 100%; border-radius: 10px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 8px 24px rgba(0,0,0,.35);
+    }
+    .coming-soon-text { flex: 1; }
+    .cs-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(30,143,213,.12); border: 1px solid rgba(30,143,213,.28);
+      color: var(--blue); padding: .3rem .9rem; border-radius: 4px;
+      font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .cs-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); animation: pulse-dot 1.6s ease-in-out infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:.4;transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+    .coming-soon-text h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 400;
+      color: var(--white); line-height: 1.1; letter-spacing: -.3px; margin-bottom: .6rem;
+    }
+    .coming-soon-text h1 em { color: var(--blue); font-style: italic; }
+    .cs-author { font-size: .9rem; color: rgba(255,255,255,.45); margin-bottom: 1.8rem; }
+    .coming-soon-text p {
+      font-size: .97rem; color: rgba(255,255,255,.58); line-height: 1.85; margin-bottom: 2rem; max-width: 480px;
+    }
+    .cs-notify-label { font-size: .76rem; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .5px; margin-bottom: .7rem; }
+    .cs-form { display: flex; gap: .7rem; max-width: 420px; }
+    .cs-form input {
+      flex: 1; padding: .75rem 1rem;
+      background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.15);
+      border-radius: 4px; color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: .88rem; outline: none;
+      transition: border-color .25s;
+    }
+    .cs-form input::placeholder { color: rgba(255,255,255,.3); }
+    .cs-form input:focus { border-color: var(--blue); }
+    .cs-form button {
+      background: var(--blue); color: var(--white); border: none;
+      padding: .75rem 1.4rem; border-radius: 4px; font-size: .88rem; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+      transition: background .25s, transform .25s;
+    }
+    .cs-form button:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .cs-back { margin-top: 2.2rem; }
+    .cs-back a { font-size: .82rem; color: rgba(255,255,255,.35); text-decoration: none; transition: color .25s; }
+    .cs-back a:hover { color: rgba(255,255,255,.7); }
+    .cs-back a::before { content: '← '; }
+    @media (max-width: 760px) {
+      .coming-soon-inner { flex-direction: column; gap: 3rem; text-align: center; }
+      .book-cover-wrap { width: 200px; }
+      .cs-form { flex-direction: column; }
+      .coming-soon-text p, .cs-form { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><img src="Images/RVB_Associates_logo_high_res.png" alt="RVB Associates" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown">
+      <a href="what-we-do.html">Services</a>
+      <ul class="dropdown">
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="keynote.html">Keynote Speaking</a></li>
+      </ul>
+    </li>
+    <li><a href="books.html" class="active">Books</a></li>
+    <li><a href="newsroom.html">Insights</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book a Consultation</a>
+</nav>
+
+<div class="coming-soon-wrap">
+  <div class="coming-soon-inner">
+    <div class="book-cover-wrap fade-up">
+      <img src="Images/Disruption_Ready_Book_Cover.jpeg" alt="Disruption Ready book cover" />
+    </div>
+    <div class="coming-soon-text fade-up">
+      <div class="cs-badge">Coming Soon</div>
+      <h1>Disruption <em>Ready</em></h1>
+      <p class="cs-author">Dr. Rob Bogosian</p>
+      <p>The next groundbreaking work from Dr. Rob Bogosian — a guide for leaders navigating the age of constant disruption. More details coming soon.</p>
+      <p class="cs-notify-label">Notify me when it's available</p>
+      <div class="cs-form">
+        <input type="email" placeholder="Your email address" />
+        <button type="button">Notify Me</button>
+      </div>
+      <div class="cs-back"><a href="books.html">Back to all books</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">RVB<span>.</span></div>
+      <p>A leadership development and organizational consulting firm helping executives and organizations reach their full potential.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="keynote.html">Keynote Speaking</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About RVB</a></li>
+      <li class="has-dropdown"><a href="books.html">Books</a><ul class="dropdown"><li><a href="the-book.html">Breaking Corporate Silence</a></li><li><a href="seven-myths.html">Seven Myths of Leadership</a></li><li><a href="disruption-ready.html">Disruption Ready</a></li></ul></li>
+      <li><a href="newsroom.html">Insights</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="contact.html">Get In Touch</a></li>
+      <li><a href="mailto:info@rvbassociates.com">info@rvbassociates.com</a></li>
+      <li><a href="#">Naples, FL</a></li>
+      <li><a href="#">Mashpee, MA</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 RVB Associates. All rights reserved.</p>
+    <p>Leadership Development &amp; Organizational Consulting</p>
+  </div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  document.querySelectorAll('.fade-up').forEach(el => {
+    new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.08 }).observe(el);
+  });
+</script>
+</body>
+</html>
