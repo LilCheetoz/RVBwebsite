@@ -15,26 +15,41 @@
       height: 100dvh; min-height: 620px; padding: 0;
       display: grid; grid-template-rows: 1fr auto auto;
       position: relative; overflow: hidden;
-      background:
-        linear-gradient(130deg, rgba(7,15,30,.97) 0%, rgba(11,37,69,.92) 52%, rgba(13,59,110,.78) 100%),
-        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1800&q=80') center/cover no-repeat;
+      background: var(--navy);
+    }
+    /* Rob photo — right side, full photo visible */
+    .hero-bg-photo {
+      position: absolute; right: 0; top: 0; bottom: 0;
+      z-index: 0; display: flex; align-items: flex-end;
+    }
+    .hero-bg-photo img {
+      height: 112%; width: auto; display: block;
+    }
+    /* Blue fade on the left edge of the photo */
+    .hero-bg-photo::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right,
+        rgba(7,15,30,1) 0%,
+        rgba(11,37,69,.95) 20%,
+        rgba(11,37,69,.5) 45%,
+        transparent 70%);
     }
     /* Dot grid overlay */
     .hero::before {
-      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      background-image: radial-gradient(circle, rgba(255,255,255,.055) 1px, transparent 1px);
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
       background-size: 42px 42px;
     }
     .hero-content {
       display: flex; align-items: center; padding: 140px 5% 40px;
-      position: relative; z-index: 1;
-      justify-content: space-between; gap: 4rem;
+      position: relative; z-index: 2;
+      justify-content: flex-start; gap: 4rem;
     }
-    .cred-strip { position: relative; z-index: 1; }
+    .cred-strip { position: relative; z-index: 2; }
 
     /* SCROLL CUE */
     .scroll-cue {
-      position: relative; z-index: 1;
+      position: relative; z-index: 2;
       display: flex; flex-direction: column; align-items: center; gap: .55rem;
       padding: .6rem 0 1.4rem;
     }
@@ -57,40 +72,6 @@
     }
     .hero-inner { max-width: 620px; }
 
-    /* Right-side decorative visual */
-    .hero-visual {
-      flex-shrink: 0; width: 420px; height: 420px;
-      position: relative; display: flex; align-items: center; justify-content: center;
-    }
-    .hero-ring {
-      position: absolute; border-radius: 50%;
-      border: 1px solid rgba(30,143,213,.14); top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .hero-ring-1 { width: 110px; height: 110px; border-color: rgba(30,143,213,.5); }
-    .hero-ring-2 { width: 210px; height: 210px; border-color: rgba(30,143,213,.28); }
-    .hero-ring-3 { width: 320px; height: 320px; border-color: rgba(30,143,213,.15); }
-    .hero-ring-4 { width: 440px; height: 440px; border-color: rgba(30,143,213,.07); }
-    .hero-ring-5 { width: 570px; height: 570px; border-color: rgba(30,143,213,.04); }
-    .hero-core {
-      width: 52px; height: 52px; border-radius: 50%; z-index: 2; position: relative;
-      background: radial-gradient(circle at 38% 36%, rgba(30,143,213,.95), rgba(13,59,110,.7));
-      box-shadow:
-        0 0 0 10px rgba(30,143,213,.09),
-        0 0 0 22px rgba(30,143,213,.05),
-        0 0 60px rgba(30,143,213,.35),
-        0 0 120px rgba(30,143,213,.15);
-    }
-    /* Tick marks on the outermost ring */
-    .hero-tick {
-      position: absolute; width: 4px; height: 4px; border-radius: 50%;
-      background: rgba(30,143,213,.5); top: 50%; left: 50%;
-    }
-    .hero-tick-1 { transform: translate(-50%, -50%) translateY(-160px); }
-    .hero-tick-2 { transform: translate(-50%, -50%) rotate(72deg) translateY(-160px); }
-    .hero-tick-3 { transform: translate(-50%, -50%) rotate(144deg) translateY(-160px); }
-    .hero-tick-4 { transform: translate(-50%, -50%) rotate(216deg) translateY(-160px); }
-    .hero-tick-5 { transform: translate(-50%, -50%) rotate(288deg) translateY(-160px); }
     .hero-eyebrow {
       display: block; font-size: .68rem; font-weight: 700; letter-spacing: 2.5px;
       text-transform: uppercase; color: var(--blue); margin-bottom: 1.6rem;
@@ -322,6 +303,9 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg-photo">
+    <img src="Images/Rob bogosian.jpeg" alt="Dr. Rob Bogosian" />
+  </div>
   <div class="hero-content">
     <div class="hero-inner" style="flex-shrink:0;">
       <span class="hero-eyebrow">Leadership &amp; Organizational Consulting</span>
@@ -333,19 +317,6 @@
         <a href="what-we-do.html" class="btn-outline-white">Explore Services</a>
       </div>
       <p class="hero-proof">Trusted by executives at Microsoft, Toyota, Comcast, and 50+ organizations worldwide</p>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-ring hero-ring-5"></div>
-      <div class="hero-ring hero-ring-4"></div>
-      <div class="hero-ring hero-ring-3"></div>
-      <div class="hero-ring hero-ring-2"></div>
-      <div class="hero-ring hero-ring-1"></div>
-      <div class="hero-tick hero-tick-1"></div>
-      <div class="hero-tick hero-tick-2"></div>
-      <div class="hero-tick hero-tick-3"></div>
-      <div class="hero-tick hero-tick-4"></div>
-      <div class="hero-tick hero-tick-5"></div>
-      <div class="hero-core"></div>
     </div>
   </div>
   <div class="scroll-cue" aria-hidden="true">
