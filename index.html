@@ -13,7 +13,7 @@
     /* HERO */
     .hero {
       height: 100dvh; min-height: 620px; padding: 0;
-      display: grid; grid-template-rows: 1fr auto auto;
+      display: grid; grid-template-rows: 1fr auto;
       position: relative; overflow: hidden;
       background: var(--navy);
     }
@@ -37,9 +37,8 @@
       filter: brightness(.55) saturate(.8);
     }
     .hero-photo-caption {
-      position: absolute; bottom: 2.2rem; left: 50%;
-      transform: translateX(-50%);
-      z-index: 2; text-align: center; white-space: nowrap;
+      position: absolute; bottom: 2.2rem; right: 6%;
+      z-index: 3; text-align: center; white-space: nowrap;
       color: rgba(255,255,255,.72);
       font-size: .72rem; font-weight: 500; letter-spacing: .3px;
       line-height: 1.5;
@@ -67,8 +66,6 @@
       position: relative; z-index: 2;
       justify-content: flex-start; gap: 4rem;
     }
-    .cred-strip { position: relative; z-index: 2; }
-
     /* SCROLL CUE */
     .scroll-cue {
       position: relative; z-index: 2;
@@ -112,10 +109,9 @@
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.8rem; }
     .hero-proof { font-size: .72rem; color: rgba(255,255,255,.32); letter-spacing: .5px; }
 
-    /* CREDIBILITY STRIP — anchored inside hero at bottom of viewport */
+    /* CREDIBILITY STRIP */
     .cred-strip {
-      background: rgba(5,12,28,.72);
-      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      background: #070f1e;
       border-top: 1px solid rgba(255,255,255,.08);
     }
     .cred-inner { display: flex; max-width: 1100px; margin: 0 auto; padding: 0 5%; }
@@ -329,10 +325,41 @@
       .cred-item:nth-last-child(-n+2) { border-bottom: none; }
     }
     @media (max-width: 640px) {
-      .hero-content { padding: 110px 5% 40px; }
-      .book-card { flex-direction: column; gap: 1.5rem; }
-      .book-cover { width: 80px; }
-      .cred-item { flex-basis: 50%; }
+      /* Scroll cue at bottom of hero */
+      .scroll-cue { padding: .4rem 0 .9rem; }
+      /* Shrink hero content */
+      .hero-content { padding: 100px 5% 20px; }
+      .hero-eyebrow { margin-bottom: .9rem; }
+      .hero-rule { margin-bottom: .9rem; }
+      .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); margin-bottom: 1rem; }
+      .hero-sub { font-size: .88rem; margin-bottom: 1.4rem; line-height: 1.7; }
+      .hero-actions { margin-bottom: .8rem; gap: .6rem; }
+      .hero-proof { font-size: .65rem; }
+      /* Shrink cred strip */
+      .cred-item { flex-basis: 50%; padding: 1.1rem .6rem; }
+      .cred-num { font-size: 1.55rem; }
+      .cred-label { font-size: .58rem; }
+      /* Hide caption on mobile — no room without overlapping content */
+      .hero-photo-caption { display: none; }
+      /* Center Rob's photo on mobile */
+      .hero-bg-photo {
+        left: 0;
+        justify-content: center;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 78%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 78%, transparent 100%);
+        -webkit-mask-composite: source-over;
+        mask-composite: add;
+      }
+      .hero-bg-photo img {
+        height: 100%; width: 100%;
+        object-fit: cover; object-position: center top;
+      }
+      .hero-bg-photo::after {
+        background: linear-gradient(to bottom,
+          rgba(7,15,30,.8) 0%,
+          rgba(11,37,69,.25) 45%,
+          rgba(7,15,30,.85) 100%);
+      }
     }
   </style>
 </head>
@@ -356,6 +383,7 @@
     <li><a href="newsroom.html">Insights</a></li>
     <li><a href="disruption-ready.html">Coming Soon</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
   <a href="contact.html" class="nav-cta">Book a Consultation</a>
 </nav>
 
@@ -363,10 +391,10 @@
 <section class="hero">
   <div class="hero-bg-photo">
     <img src="Images/Rob bogosian.jpeg" alt="Dr. Rob Bogosian" />
-    <div class="hero-photo-caption">
-      <strong>Dr. Rob Bogosian</strong>
-      RVB Associates, Inc. Founder<br/>Leadership and Culture Expert
-    </div>
+  </div>
+  <div class="hero-photo-caption">
+    <strong>Dr. Rob Bogosian</strong>
+    RVB Associates, Inc. Founder<br/>Leadership and Culture Expert
   </div>
   <div class="hero-content">
     <div class="hero-inner" style="flex-shrink:0;">
@@ -387,15 +415,15 @@
     <div class="scroll-chevron"></div>
     <div class="scroll-chevron"></div>
   </div>
-  <div class="cred-strip">
-    <div class="cred-inner">
-      <div class="cred-item"><span class="cred-num">20+</span><span class="cred-label">Years of Experience</span></div>
-      <div class="cred-item"><span class="cred-num">200+</span><span class="cred-label">Leaders Developed</span></div>
-      <div class="cred-item"><span class="cred-num">50+</span><span class="cred-label">Organizations Served</span></div>
-      <div class="cred-item"><span class="cred-num">95%</span><span class="cred-label">Client Retention</span></div>
-    </div>
-  </div>
 </section>
+<div class="cred-strip">
+  <div class="cred-inner">
+    <div class="cred-item"><span class="cred-num">20+</span><span class="cred-label">Years of Experience</span></div>
+    <div class="cred-item"><span class="cred-num">200+</span><span class="cred-label">Leaders Developed</span></div>
+    <div class="cred-item"><span class="cred-num">50+</span><span class="cred-label">Organizations Served</span></div>
+    <div class="cred-item"><span class="cred-num">95%</span><span class="cred-label">Client Retention</span></div>
+  </div>
+</div>
 
 <!-- CLIENT LOGOS — infinite marquee -->
 <div class="clients">
@@ -654,6 +682,8 @@
 <script>
   const nb = document.getElementById('navbar');
   window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+  document.querySelector('.nav-hamburger').addEventListener('click', () => nb.classList.toggle('nav-open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nb.classList.remove('nav-open')));
   const obs = new IntersectionObserver(
     e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')),
     { threshold: 0.08 }

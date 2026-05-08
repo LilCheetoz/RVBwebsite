@@ -229,6 +229,21 @@ section:not(.hero):not(.impact-home):not(.page-hero) {
 .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+/* ── HAMBURGER ────────────────────────────────────────────── */
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 6px 4px;
+  background: none; border: none; flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: rgba(255,255,255,.8); border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 960px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -236,7 +251,26 @@ section:not(.hero):not(.impact-home):not(.page-hero) {
 }
 @media (max-width: 640px) {
   nav { padding: 0 4%; }
-  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute; top: 72px; left: 0; right: 0;
+    background: rgba(11,37,69,.98);
+    flex-direction: column; padding: .5rem 0 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    gap: 0;
+  }
+  nav.nav-open .nav-links { display: flex; }
+  .nav-links > li > a { padding: .75rem 5%; font-size: .9rem; display: block; }
+  .has-dropdown > a::after { display: none; }
+  .dropdown {
+    position: static; opacity: 1; visibility: visible;
+    transform: none; background: rgba(255,255,255,.04);
+    border-radius: 0; border: none; box-shadow: none;
+    min-width: 0; padding: 0;
+  }
+  .dropdown li a { padding: .55rem 5% .55rem 8%; font-size: .84rem; }
+  .nav-cta { font-size: .75rem; padding: .45rem .9rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: .6rem; text-align: center; }
   section { padding: 70px 5%; }
