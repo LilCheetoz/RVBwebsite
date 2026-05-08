@@ -22,8 +22,8 @@
   --transition: .25s cubic-bezier(.4,0,.2,1);
 }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
 /* ── NAV ──────────────────────────────────────────────────── */
 nav {
@@ -261,7 +261,8 @@ nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rota
     gap: 0;
   }
   nav.nav-open .nav-links { display: flex; }
-  .nav-links > li > a { padding: .75rem 5%; font-size: .9rem; display: block; }
+  .nav-links > li > a { padding: .75rem 5%; font-size: .9rem; display: block; white-space: normal; }
+  .nav-links a { white-space: normal; }
   .has-dropdown > a::after { display: none; }
   .dropdown {
     position: static; opacity: 1; visibility: visible;
