@@ -73,6 +73,22 @@
     .cs-back a { font-size: .82rem; color: rgba(255,255,255,.35); text-decoration: none; transition: color .25s; }
     .cs-back a:hover { color: rgba(255,255,255,.7); }
     .cs-back a::before { content: '← '; }
+
+    .read-more-wrap { margin-bottom: 2rem; }
+    .read-more-content {
+      max-height: 0; overflow: hidden;
+      transition: max-height .5s ease, opacity .4s ease;
+      opacity: 0;
+    }
+    .read-more-content.open { max-height: 600px; opacity: 1; }
+    .read-more-btn {
+      background: none; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.6);
+      font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 600;
+      padding: .45rem 1rem; border-radius: 4px; cursor: pointer; margin-top: .5rem;
+      transition: border-color .25s, color .25s;
+    }
+    .read-more-btn:hover { border-color: var(--blue); color: var(--blue); }
+
     @media (max-width: 760px) {
       .coming-soon-inner { flex-direction: column; gap: 3rem; text-align: center; }
       .book-cover-wrap { width: 200px; }
@@ -99,7 +115,7 @@
     </li>
     <li class="has-dropdown"><a href="books.html" class="active">Books</a><ul class="dropdown"><li><a href="the-book.html">Breaking Corporate Silence</a></li><li><a href="seven-myths.html">Seven Myths of Leadership</a></li><li><a href="books.html#disruption-ready">Disruption Ready</a></li></ul></li>
     <li><a href="newsroom.html">Insights</a></li>
-    <li><a href="books.html#disruption-ready" class="active">Coming Soon</a></li>
+    <li><a href="disruption-ready.html" class="active">Coming Soon</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
   <a href="contact.html" class="nav-cta">Book a Consultation</a>
@@ -114,7 +130,16 @@
       <div class="cs-badge">Coming Soon</div>
       <h1>Disruption <em>Ready</em></h1>
       <p class="cs-author">Dr. Rob Bogosian</p>
-      <p>The next groundbreaking work from Dr. Rob Bogosian — a guide for leaders navigating the age of constant disruption. More details coming soon.</p>
+      <p>For the past two decades, change management has been the dominant grammar of corporate transformation. It has also become inadequate to the conditions in which today's senior leaders actually operate.</p>
+      <div class="read-more-wrap">
+        <div class="read-more-content" id="readMoreContent">
+          <p><em>Disruption-Ready Leadership</em> introduces a successor framework — one designed for an environment in which volatility is continuous rather than episodic, in which the cost of a single hour of downtime exceeds $300,000 for ninety percent of large enterprises, and in which the organizations that built integrated resilience programs delivered 150% higher cumulative shareholder returns than their peers over the decade following the last financial crisis.</p>
+          <p>The framework is the work of two practitioner-scholars. Dr. Rob Bogosian, founder of RVB Associates and former Chief Talent Officer at Wachovia, has spent thirty years inside the leadership development practices of Fortune 100 institutions, including ongoing strategic advisory work with Mass General Brigham, Prudential Insurance Company, Microsoft and more.</p>
+          <p>In <em>Disruption-Ready Leadership</em>, he offers senior leaders three things that rarely arrive in the same volume: a coherent theoretical model grounded in peer-reviewed evidence, a tactical playbook for the Diagnosis–Recovery–Renewal phases of any disruptive event, and a competency architecture suitable for board-level conversations about succession, culture, and risk.</p>
+          <p style="font-size:.85rem;color:var(--blue);font-weight:600;opacity:.9;">Forthcoming August 2026 from Silver Street Media. Reserve your copy and request advance materials for institutional adoption.</p>
+        </div>
+        <button class="read-more-btn" id="readMoreBtn" onclick="toggleReadMore()">Read More ↓</button>
+      </div>
       <p class="cs-notify-label">Notify me when it's available</p>
       <div class="cs-form">
         <input type="email" placeholder="Your email address" />
@@ -162,6 +187,12 @@
   document.querySelectorAll('.fade-up').forEach(el => {
     new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.08 }).observe(el);
   });
+  function toggleReadMore() {
+    const content = document.getElementById('readMoreContent');
+    const btn = document.getElementById('readMoreBtn');
+    const open = content.classList.toggle('open');
+    btn.textContent = open ? 'Read Less ↑' : 'Read More ↓';
+  }
 </script>
 </body>
 </html>
